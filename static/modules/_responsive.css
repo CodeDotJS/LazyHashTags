@@ -1,0 +1,133 @@
+@media only screen and (max-width: 1366px) {
+    .left-section {
+        gap: 10px;
+    }
+
+    .upload-area {
+        width: 380px;
+    }
+
+    #drop-zone {
+        width: 50px;
+        height: 50px;
+    }
+
+    #upload-status {
+        font-size: 16px;
+    }
+
+    .selected-hashtags {
+        width: 380px;
+        padding: 10px 30px;
+    }
+
+    .card {
+        padding: 15px;
+        max-width: 400px;
+    }
+
+    .hashtag-list span {
+        padding: 3px 8px;
+        font-size: 16px;
+    }
+
+    .card img {
+        max-height: 200px;
+    }
+}
+
+@media (max-width: 737px) {
+    .left-section {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .upload-area,
+    .selected-hashtags {
+        width: 90%;
+        max-width: 400px;
+    }
+
+    .app-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #card-container {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 20px;
+        box-sizing: border-box;
+    }
+
+    .auto-height {
+        height: auto !important;
+    }
+
+    .upload-area {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        order: 1;
+    }
+
+    #drop-zone {
+        width: 80%;
+        height: 80px;
+        margin: 0 auto;
+    }
+
+    .selected-hashtags {
+        width: 100%;
+        padding: 15px;
+        box-sizing: border-box;
+        order: 4;
+    }
+
+    .app-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    #image-preview-container {
+        order: 2;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        gap: 12px;
+    }
+
+    .image-preview {
+        position: relative;
+    }
+
+    .image-preview img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 50px;
+        height: 50px;
+        object-fit: cover;
+    }
+
+    #card-container {
+        order: 3;
+        margin: 0;
+    }
+
+    .card {
+        max-width: 100%;
+        box-sizing: border-box;
+        margin-top: 15px;
+    }
+
+    .card img {
+        max-height: 200px;
+    }
+}
