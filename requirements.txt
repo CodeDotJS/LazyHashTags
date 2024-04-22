@@ -1,0 +1,5 @@
+Flask==2.3.2
+requests==2.31.0
+flask-cors
+python-dotenv
+urllib3==1.26.7
