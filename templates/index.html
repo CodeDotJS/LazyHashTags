@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="LazyHashtags - Generate hashtags from images. Discover the perfect hashtags for your images in seconds.">
+        <meta name="keywords" content="hashtags, image hashtags, image tagging, image analysis, social media, content creation, creative hashtags, image processing, instagram">
+        <meta name="HandheldFriendly" content="True">
+        <meta name="MobileOptimized" content="320">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://lazyhashtags.vercel.app">
+        <meta property="og:title" content="LazyHashtags - Generate Hashtags from Images for Your Instagram Posts!">
+        <meta property="og:image" content="{{ url_for('static', filename='media/banner.png') }}">
+        <meta property="og:description" content="LazyHashtags helps you generate the perfect hashtags for your images for your Instagram in seconds. Discover the best hashtags for your content and boost your social media presence.">
+        <meta property="og:site_name" content="LazyHashtags">
+        <meta property="og:locale" content="en_US">
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="LazyHashtags - Generate Hashtags from Images for Your Instagram Posts!">
+        <meta name="twitter:description" content="LazyHashtags helps you generate the perfect hashtags for your images for your Instagram posts in seconds. Discover the best hashtags for your content and boost your social media presence.">
+        <meta name="twitter:image:src" content="{{ url_for('static', filename='media/banner.png') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='media/favicon.ico') }}" type="image/x-icon">
+        <title>LazyHashTags - Generate Hashtags from Images for Your Instagram Posts!</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='modules/_global.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='modules/styles.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='modules/_loader.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='modules/_responsive.css') }}">
+    </head>
+
+<body>
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar-left">
+                <div class="navbar-brand">
+                    <a href="#"><img src="{{ url_for('static', filename='media/hashtag.png') }}" alt="LazyHashTag">LazyHashtag</a>
+                </div>
+                <p class="navbar-description">Generate Hashtags from Images for Your Instagram Posts! <br><span id="info"> By <a href="https://ir8x.github.io">ir8x</a></span></p>
+            </div>
+        </nav>
+        <div id="image-preview-container"></div>
+        <div class="app-container">
+            <div class="left-section">
+                <div class="upload-area">
+                    <p>Drag and Drop or Click to Upload Images</p>
+                    <div id="drop-zone">
+                        <i class="fas fa-cloud-upload-alt"></i>
+                        <input type="file" id="file-input" accept="image/*" multiple>
+                    </div>
+                    <section class="dots-container">
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                        <div class="dot"></div>
+                    </section>
+                    <div id="upload-status"></div>
+                </div>
+                <div class="selected-hashtags">
+                    <h3>Selected Hashtags</h3>
+                    <div id="selected-hashtags-list"></div>
+                    <button id="copy-selected-btn">COPY SELECTED</button>
+                </div>
+            </div>
+            <div id="card-container"></div>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='scripts/script.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</body>
+
+</html>
