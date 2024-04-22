@@ -38,7 +38,7 @@ def get_tags():
             tags = [tag['tag']['en'] for tag in data['result']['tags']]
             return jsonify({'tags': tags}), 200
         else:
-            return jsonify({'error': 'Failed to fetch tags from Imagga API'}), response.status_code
+            return jsonify({'error': 'Failed to fetch tags from API'}), response.status_code
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
